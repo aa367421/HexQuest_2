@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版任務作業二—— AI 作業王</title>
+    <link rel="stylesheet" href="./css/all.css"/>
+</head>
+<body>
+    
+<!-- 設計稿：https://reurl.cc/LNz443-->
+
+    <div class="wrap">
+        <div class="header">
+            <a href="./home.html" class="header-logo">
+                <img src="./img/logo.png" alt="logo">
+                <img src="./img/title.png" alt="title">
+            </a> 
+            <div class="header-nav">
+                <a href="./home.html">首頁</a>
+                <a href="./pricing.html">定價</a>
+            </div>
+            <a href="#" class="burger-btn dn">
+                <span class="material-icons dn active">menu</span>
+                <span class="material-icons dn">close</span>
+            </a>
+            <div class="mobile-burger-nav dn">
+                <div class="burger-link">
+                    <a href="./home.html">首頁</a>
+                    <a href="./pricing.html">定價</a>
+                </div>
+                <div class="burger-footer">
+                    <span class="footer-about-cc">AI工具王 © 2023</span>
+                    <div class="footer-about-sns">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-section">
+            <h2 class="pricing-title">
+                用多少，<br>
+                付多少。
+            </h2>
+            <p class="pricing-quote">
+                我們相信，最靈活的取用機制，才能最大化的幫助你業務的推動。
+            </p>
+            <div class="pricing-animation">
+                <img class="invert img1" src="./img/animation_img.png" alt="animation">
+                <img class="invert img2" src="./img/animation_img.png" alt="animation">
+                <img class="invert img3" src="./img/animation_img.png" alt="animation">
+            </div>
+            <div class="pricing-price">
+                <span class="pricing-head">定價</span>
+                <ul class="pricing-price-cardlist">
+                    <li class="price-card">
+                        <div class="pricing-engineer-introduce">
+                            <span>琪琪</span>
+                            <ul class="engineer-infolist">
+                                <li>初級</li>
+                                <li>速度最快</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-info">
+                            <span>
+                                NT$5
+                                <span class="tokens">
+                                    ／1k tokens
+                                </span>
+                            </span>
+                            <a href="#">開始使用<span class="material-icons">north_east</span></a>
+                        </div>
+                    </li>
+                    <li class="price-card">
+                        <div class="pricing-engineer-introduce">
+                            <span>昊昊</span>
+                            <ul class="engineer-infolist">
+                                <li>中級</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-info">
+                            <span>
+                                NT$5
+                                <span class="tokens">
+                                    ／1k tokens
+                                </span>
+                            </span>
+                            <a href="#">開始使用<span class="material-icons">north_east</span></a>
+                        </div>
+                    </li>
+                    <li class="price-card">
+                        <div class="pricing-engineer-introduce">
+                            <span>卡卡</span>
+                            <ul class="engineer-infolist">
+                                <li>高級</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-info">
+                            <span>
+                                NT$5
+                                <span class="tokens">
+                                    ／1k tokens
+                                </span>
+                            </span>
+                            <a href="#">開始使用<span class="material-icons">north_east</span></a>
+                        </div>
+                    </li>
+                    <li class="price-card">
+                        <div class="pricing-engineer-introduce">
+                            <span>杰杰</span>
+                            <ul class="engineer-infolist">
+                                <li>最高級</li>
+                                <li>資訊最完善</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-info">
+                            <span>
+                                NT$5
+                                <span class="tokens">
+                                    ／1k tokens
+                                </span>
+                            </span>
+                            <a href="#">開始使用<span class="material-icons">north_east</span></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pricing-rule">
+                <span>使用規範</span>
+                <ul class="rule-cardlist">
+                    <li class="rule-card">
+                        <span>守法</span>
+                        <p>請遵守相關的法規和政策，不得進行任何違法違規的活動。</p>
+                    </li>
+                    <li class="rule-card">
+                        <span>資訊安全</span>
+                        <p>請務必保護好自己的帳號和密碼，不得將其透露給他人。</p>
+                    </li>
+                    <li class="rule-card">
+                        <span>守密</span>
+                        <p>需對使用過程中產生的數據負責，不得擅自泄露數據。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-section">
+            <h2 class="app-title">
+                這些超酷的應用，<br class="dn mobile">都來自 AI工具王
+            </h2>
+            <div class="app-search-bar">
+                <label for="search">
+                    <span class="material-icons">search</span>
+                </label>
+                <input type="text" placeholder="輸入關鍵字搜尋" id="search">
+            </div>
+            <div class="app-sort-bar">
+                <div class="detail-sort-list-block">
+                    <button class="detail-sort-btn" data-type="detail-sort">
+                        <span>篩選</span>
+                        <span class="sorted-options dn">2</span>
+                        <span class="material-icons dn active">filter_alt</span>
+                    </button>
+                    <div class="detail-sort-block dn opacity-0">
+                        <span>AI 模型</span>
+                        <ul class="author-sortlist">
+                            <li data-option="author" data-id="0">
+                                所有模型
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="author" data-id="1">
+                                卡卡
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="author" data-id="2">
+                                杰杰
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="author" data-id="3">
+                                琪琪
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="author" data-id="4">
+                                昊昊
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                        </ul>
+                        <span class="pt-24">類型</span>
+                        <ul class="type-sortlist">
+                            <li data-option="type" data-id="0">
+                                所有類型
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="1">
+                                聊天
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="2">
+                                影像辨識
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="3">
+                                翻譯
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="4">
+                                行銷
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="5">
+                                客服
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                            <li data-option="type" data-id="6">
+                                生產力
+                                <span class="material-icons opacity-0 active">
+                                    done
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-sort-bar">
+                    <div class="feature-sort-filter" data-type="feature-sort">
+                        <button class="active">全部</button>
+                        <button>聊天</button>
+                        <button>影像辨識</button>
+                        <button>翻譯</button>
+                        <button>行銷</button>
+                        <button>客服</button>
+                        <button>生產力</button>
+                    </div>
+                </div>
+                <div class="time-sort-block">
+                    <button data-type="time-sort">
+                        <span>由新到舊</span>
+                        <span class="material-icons">expand_more</span>
+                    </button>
+                    <ul class="time-sortlist dn opacity-0">
+                        <li class="time-option" data-id="">由新到舊</li>
+                        <li class="time-option" data-id="">由舊到新</li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="product-cardlist">
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_0.png" alt="cardPicture0"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Chatbot Builder</h3>
+                        <p>建立智能化的聊天機器人，解答常見問題、提供客戶支援、收集反饋等。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>卡卡</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#聊天</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_1.png" alt="cardPicture1"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Image Recognition Platform</h3>
+                        <p class="pb-42">專業的圖像識別平台，識別圖像、分類、標記等。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>杰杰</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#影像辨識</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_2.png" alt="cardPicture2"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Language Translation API</h3>
+                        <p>專業的語言翻譯 API，實現文本翻譯功能，支援多種格式的文本。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>琪琪</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#翻譯</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_3.png" alt="cardPicture3"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Sentiment Analysis API</h3>
+                        <p>自動識別文本中的情感傾向，包括正向、負向和中性等。適用於情感分析、社交媒體監控、市場調查等。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>昊昊</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#行銷</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_4.png" alt="cardPicture4"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Fraud Detection Platform</h3>
+                        <p class="pb-42">預防詐騙活動，適用於銀行、金融、電商等。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>卡卡</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#客服</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="product-card">
+                    <div class="card-img-section">
+                        <img src="./img/card/card_5.png" alt="cardPicture5"/>
+                    </div>
+                    <div class="product-card-text">
+                        <h3>Voice Assistant SDK</h3>
+                        <p>通過語音控制應用程式、設備，實現多種功能，例如播放音樂、查詢天氣、發送信息等。</p>
+                    </div>
+                    <div class="product-card-info">
+                        <div class="card-type-and-author">
+                            <span>AI 模型</span>
+                            <span>杰杰</span>
+                        </div>
+                        <div class="card-tag">
+                            <span>#生產力</span>
+                            <a href="#">
+                                <span class="material-icons">share</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="page-bar">
+                <button data-page="1" class="active">
+                    <span>1</span>
+                </button>
+                <button data-page="2">
+                    <span>2</span>
+                </button>
+                <button data-page="3">
+                    <span>3</span>
+                </button>
+                <button data-page="4">
+                    <span>4</span>
+                </button>
+                <button data-page="5">
+                    <span>5</span>
+                </button>
+                <button data-page="next">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="question-section">
+            <span>常見問題</span>
+            <ul class="question-cardlist">
+                <li class="question-card">
+                    <div class="icon" data-id="0">
+                        <span class="material-icons active">add</span>
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div class="content">
+                        <p class="question">如何選擇適合的AI模型？</p>
+                        <p class="answer">
+                            選擇適合的 AI 模型需要考慮您的應用場景、需要解決的問題、可用的資源以及預算等因素。可以通過對比不同模型的性能、準確率、速度等指標，以及與其他用戶的評價與反饋，來選擇最適合的模型。
+                        </p>
+                    </div>
+                    
+                </li>
+                <li class="question-card">
+                    <div class="icon" data-id="1">
+                        <span class="material-icons active">add</span>
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div class="content">
+                        <p class="question">租用模型的費用是如何計算的？</p>
+                        <p class="answer">
+                            租用模型的費用通常會根據模型的性能和使用時間等因素進行計算。具體而言，模型的性能可以根據其精度、速度、暫用資源等指標來評估；而使用時間可以根據租用時間的長短來計算，通常會按小時、天或月來計算。綜合考慮這些因素，系統會自動算出對應的租用費用。
+                        </p>
+                    </div>
+                </li>
+                <li class="question-card">
+                    <div class="icon" data-id="2">
+                        <span class="material-icons active">add</span>
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div class="content">
+                        <p class="question">如何進行付款？</p>
+                        <p class="answer">
+                            付款方式可以通過網站上提供的宴上支付平台進行支付。具體而言，您可以選擇信用卡、銀行轉帳電子錢包等不同的支付方式進行支付。在支付前，您需要先登錄網站並選擇適合的租用方案，系統會自動計算出對應的租用欸用和支付金額，然後您可以選擇適合的支付方式進行支付。完成支付後，系統會自動向您提供相應的服務。
+                        </p>
+                    </div>
+                </li>
+                <li class="question-card">
+                    <div class="icon" data-id="3">
+                        <span class="material-icons active">add</span>
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div class="content">
+                        <p class="question">租用模型的期限是多久？</p>
+                        <p class="answer">
+                            租用模型的期限可以根據您的需求進行設置，通常可以選擇幾個小時、幾天或幾個月等不同的時間段。
+                        </p>
+                    </div>
+                </li>
+                <li class="question-card">
+                    <div class="icon" data-id="4">
+                        <span class="material-icons active">add</span>
+                        <span class="material-icons">remove</span>
+                    </div>
+                    <div class="content">
+                        <p class="question">如果在使用過程中遇到問題，應該怎麼處理？</p>
+                        <p class="answer">
+                            如果在使用過程中遇到問題，您可以聯繫客服或技術支持人員進行諮詢或報告問題。您也可以。您也可以通過網站上的幫助中心或社區論壇尋找相關的解決方案和回答。
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="footer-nav">
+                <div class="footer-nav-link">
+                    <a href="./home.html">首頁</a>
+                    <a href="./pricing.html">定價</a>
+                </div>
+                <a href="./home.html"class="footer-nav-logo">
+                    <img src="./img/logo.png" alt="logo">
+                    <img src="./img/title.png" alt="title">
+                    <h1>AI工具王</h1>
+                </a>
+            </div>
+            <div class="footer-about">
+                <span class="footer-about-cc">AI工具王 © 2023</span>
+                <div class="footer-about-sns">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <a class="footer-about-to-top" href="#">
+                    <span>Back to top</span>
+                    <span class="material-icons">expand_less</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/all.js"></script>
+</body>
+</html>

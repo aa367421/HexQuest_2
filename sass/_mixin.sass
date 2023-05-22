@@ -1,0 +1,39 @@
+@mixin hideText
+    text-indent: 101%
+    white-space: nowrap
+    overflow: hidden
+    position: relative
+    h1
+        position: absolute
+        z-index: -1
+        font-size: 0
+        opacity: 0
+
+
+@mixin mobile
+    @media(max-width: 425px) 
+        @content
+
+
+@mixin btn
+    font-family: 'Noto Sans TC', sans-serif !important
+    +flex
+    background-color: $black100
+    color: $black0
+    font-weight: 900
+    font-size: 20px
+    line-height: 120%
+    border: 1px solid $black0
+    border-radius: 16px
+    cursor: pointer
+    transition: 0.3s all
+    &:hover
+        background-color: $black20
+        color: $black100
+        box-shadow: 0px 0px 3px $black60
+        transform: scale(1.05, 1.05)
+
+@mixin flex($j:center, $a:center)
+    display: flex
+    justify-content: $j
+    align-items: $a

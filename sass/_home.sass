@@ -1,0 +1,188 @@
+.landing-section
+  +mobile
+    margin-top: 120px // for header nav
+  .landing-title
+    font-weight: 900
+    font-size: 120px
+    line-height: 1.2
+    margin-bottom: 40px
+    +mobile
+      font-size: 48px
+  .landing-start-btn
+    +btn
+    padding: 20px 40px
+    margin-bottom: 100px
+    +mobile
+      margin-bottom: 180px
+  .landing-animation
+    width: 100%
+    +flex(flex-end)
+    margin-bottom: 160px
+    overflow: hidden
+    img
+      width: unset
+      animation: FadeToTop 5s ease-in-out infinite 
+      @for $i from 1 through 3
+        &.img#{$i}
+          animation-delay: -$i * 1.5s
+    +mobile
+      width: unset
+      margin-bottom: 120px
+      img
+        width: 33%
+      
+  .landing-service-title
+    width: 100%
+    height: auto
+    +flex(space-between)
+    font-weight: 900
+    margin-bottom: 80px
+    span
+      font-size: 32px
+      line-height: 1.2
+      flex: 30%
+      margin-right: 24px
+    p
+      font-size: 48px
+      line-height: 1.2
+      flex: 70%
+    +mobile
+      display: block
+      width: calc(100vw - 24px)
+      margin-bottom: 48px
+      span
+        font-size: 20px
+        margin-bottom: 24px
+      p
+        font-size: 32px
+
+.landing-service-cardlist
+  +flex(space-between, strech)
+  margin-bottom: 160px
+  .service-card
+    width: 32%
+    +flex(flex-start, flex-start)
+    flex-direction: column
+    padding: 80px 40px
+    border: 1px solid $black80
+    border-radius: 16px
+    span:first-child
+      font-size: 80px
+      margin-bottom: 20px
+    span
+      font-weight: 900
+      font-size: 32px
+      line-height: 1.2
+      margin-bottom: 20px
+    p
+      color: $black20
+  +mobile
+    display: block
+    margin-bottom: 120px
+    .service-card
+      width: 100%
+      padding: 40px 20px
+      margin-bottom: 12px
+      &:last-child
+        margin-bottom: unset
+
+.landing-section
+  .landing-sponsor
+    margin-bottom: 160px
+    span
+      font-weight: 900
+      font-size: 32px
+      line-height: 1.2
+      margin-bottom: 80px
+    .sponsor-img
+      img:first-child
+        margin-bottom: 20px
+    +mobile
+      position: relative
+      margin-bottom: 48px
+      span
+        font-size: 20px
+        margin-bottom: 24px
+      .sponsor-img
+        overflow-x: scroll
+        img
+          width: unset
+        &::-webkit-scrollbar
+          display: none
+      &::before, &::after
+        content: ""
+        width: 20%
+        height: 110px
+        display: block
+        position: absolute
+        z-index: 1
+      &::before
+        background: linear-gradient(90deg, $black100 0%, $black100 30%, rgba(0, 0, 0, 0%) 100%)
+        top: 48px
+        left: 0
+      &::after
+        background: linear-gradient(270deg, $black100 0%, $black100 30%, rgba(0, 0, 0, 0%) 100%)
+        top: 48px
+        right: 0
+
+.landing-comment-cardlist
+  +flex(space-between, strech)
+  margin-bottom: 120px
+  +mobile
+    display: block
+
+.comment-card
+  width: 32%
+  +flex(space-between, flex-start)
+  flex-direction: column
+  background-color: rgba(255, 255, 255, 0.08)
+  border-radius: 16px
+  padding: 40px
+  .card-star
+    +flex(flex-start)
+    margin-bottom: 20px
+    span
+      font-size: 13.33px
+      margin-right: 4px
+  p
+    min-height: 210px
+    color: $black20
+    margin-bottom: 20px
+  .card-info
+    +flex(flex-start)
+    img
+      width: 48px
+      height: 48px
+      margin-right: 16px
+    .user-info
+      +flex(flex-start, flex-start)
+      flex-direction: column
+      span:first-child
+        margin-bottom: 4px
+        font-weight: 700
+      span:last-child
+        font-size: 14px
+  +mobile
+    width: unset
+    p
+      min-height: 144px
+
+.promote-section
+  padding: 160px 0px 180px 0px
+  p
+    font-weight: 900
+    font-size: 48px
+    line-height: 1.2
+    text-align: center
+    margin-bottom: 40px
+  .app-start-btn
+    +btn
+    margin: 0 auto
+    padding: 20px 40px
+    span:first-child
+      margin-right: 12px
+  +mobile
+    padding-bottom: 160px
+    p
+      font-size: 32px
+      margin-bottom: 32px

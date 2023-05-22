@@ -1,0 +1,264 @@
+.app-section
+  width: 100%
+  +flex(flex-start, center)
+  flex-direction: column
+  background-color: $black0
+  color: $black100
+  padding: 160px 0px
+  border-radius: 160px
+  overflow: hidden
+  > *
+    width: 67.5%
+    min-width: 1296px
+  .app-title
+    font-weight: 900
+    font-size: 80px
+    line-height: 1.2
+    margin-bottom: 80px
+  +mobile
+    border-radius: 20px
+    padding: 80px 0px
+    > *
+      width: 100%
+      min-width: 351px
+      padding: 0 12px
+    .app-title
+      text-align: center
+      font-size: 32px
+      margin-bottom: 32px
+  .app-search-bar
+    +flex(flex-start)
+    background-color: $black20
+    min-height: 64px
+    border-radius: 16px
+    overflow: hidden
+    margin-bottom: 24px
+    >*
+      padding: 20px 0px
+    label
+      cursor: text
+      span
+        padding: 0px 15.5px 0px 45px
+        color: $black60
+    input
+      background: $black20
+      border: none
+      width: 100%
+      color: $black100
+      font-size: 16px
+      line-height: 1.5
+      &::placeholder
+        color: $black60
+      &:focus
+        outline: none
+    +mobile
+      width: calc(100% - 24px)
+      margin-bottom: 16px
+
+.app-sort-bar
+  +flex(space-between)
+  margin-bottom: 40px
+  button
+    font-family: 'Noto Sans TC', sans-serif
+    cursor: pointer
+    +flex
+    background-color: $black0
+    border: 1px solid $black20
+    border-radius: 16px
+    padding: 20px 40px
+    font-size: 16px
+    line-height: 1.5
+    color: $black100
+    &:hover
+      border: 1px solid $black100
+    span:first-child
+      margin-right: 12px
+  li
+    cursor: pointer
+    &:hover
+      background-color: $black20
+  .feature-sort-bar
+    .feature-sort-filter
+      +flex(space-between)
+    button
+      padding: 8px 16px
+      margin-right: 8px
+      border: 0px
+      color: $black60
+      &:last-child
+        margin-right: 0
+      &:hover, &.active
+        background-color: $black20
+        color: $black100
+        font-weight: 700
+      &.active
+        font-weight: 700
+  +mobile
+    flex-wrap: wrap
+    margin-bottom: 32px
+    .detail-sort-list-block
+      order: 1
+    .time-sort-block
+      order: 2
+    .feature-sort-bar
+      order: 3
+      overflow-x: scroll
+      &::-webkit-scrollbar
+        display: none
+      .feature-sort-filter
+        display: block
+        width: 524px
+        padding: 16px 0px
+        button
+          display: inline-block
+          margin-right: auto
+
+.detail-sort-list-block
+  position: relative
+  .active
+    display: block
+    opacity: 1
+  .sorted-options
+    width: 24px
+    height: 24px
+    font-size: 12px
+    border-radius: 4px
+    background-color: $black100
+    color: $black0
+    &.active
+      +flex
+  .detail-sort-block
+    position: absolute
+    top: calc(66px + 4px)
+    z-index: 1
+    background-color: #fff
+    border: 1px solid $black0
+    border-radius: 16px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+    span:not(.material-icons)
+      color: $black60
+      font-size: 12px
+      font-weight: 700
+      line-height: 1.5
+      padding-top: 20px
+      margin-bottom: 8px
+      margin-left: 40px
+      &.pt-24
+        padding-top: 24px
+        border-top: 1px solid $black20
+    li
+      width: 240px
+      +flex(space-between)
+      margin-bottom: 8px
+      padding: 4px 32px 4px 40px
+      span
+        pointer-events: none
+      +mobile
+        width: calc(100vw - 24px)
+    .type-option:last-child
+      margin-bottom: 20px
+
+.time-sort-block
+  position: relative
+  .time-sortlist
+    position: absolute
+    top: calc(66px + 4px)
+    right: 0
+    z-index: 1
+    background-color: $black0
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15)
+    border-radius: 16px
+    padding: 16px 0px
+    &.active
+      display: block
+      opacity: 1
+    .time-option
+      text-align: center
+      padding: 4px 40px
+      &:first-child
+        margin-bottom: 8px
+
+
+.product-cardlist
+  +flex(space-between, stretch)
+  flex-wrap: wrap
+  margin-bottom: 16px
+  +mobile
+    display: block
+
+.product-card
+  +flex(flex-start, stretch)
+  flex-direction: column
+  width: 416px
+  border: 1px solid $black20
+  border-radius: 16px
+  overflow: hidden
+  margin-bottom: 24px
+  .card-img-section
+    overflow: hidden
+    margin-bottom: 20px
+    img
+      object-fit: cover
+      transition: 0.5s
+  &:hover
+    img
+      transform: scale(1.1, 1.1)
+  +mobile
+    width: 100%
+    margin-bottom: 12px
+    .card-img-section img:hover
+      transform: unset
+    
+.product-card-text
+    flex-grow: 1
+    h3
+      font-weight: 900
+      font-size: 20px
+      line-height: 1.2
+      margin-bottom: 12px
+      padding: 0 32px
+    p
+      font-size: 14px
+      color: #525252
+      padding: 0 32px
+      padding-bottom: 20px
+      &.pb-42
+        padding-bottom: 42px
+
+.product-card-info
+  >div
+    +flex(space-between, center)
+    padding: 20px 32px
+    border-top: 1px solid $black20
+
+.card-type-and-author span:first-child
+  font-weight: 700
+
+.card-tag a
+  color: $black100
+  transition: 0.3s
+  &:hover
+    transform: scale(1.2, 1.2)
+
+.page-bar
+  width: 67.5%
+  +flex(flex-end)
+  button
+    +flex
+    width: 48px
+    height: 48px
+    font-size: 14px
+    font-weight: 700
+    line-height: 1.5
+    background-color: $black0
+    color: $black100
+    border: none
+    border-radius: 16px
+    margin-right: 4px
+    cursor: pointer
+    &:hover
+      background-color: $black80
+      color: $black0
+    &.active
+      background-color: $black100
+      color: $black0

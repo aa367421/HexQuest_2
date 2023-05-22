@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+
+*, *::before, *::after
+    box-sizing: border-box
+    user-select: none
+
+a
+    color: unset
+    text-decoration: none
+
+body
+    background-color: $black100
+
+img
+    width: 100%
+    display: block
+    &.invert
+        // filter by https://codepen.io/sosuke/pen/Pjoqqp
+        -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%) // Safari
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)
+
+span
+    display: block
+
+button > * 
+    pointer-events: none
+
+.dn
+    display: none
+
++mobile
+    .mobile
+        display: block
+
+.opacity-0
+    opacity: 0
+
+.wrap
+    width: 100%
+    max-width: 1920px
+    font-family: 'Noto Sans TC', sans-serif !important
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.5
+    color: $black0
+    +mobile
+        max-width: 425px
+
+:where(.wrap) > div //:where()調整權重
+    width: 67.5vw
+    margin: 0 auto
+    +mobile
+        width: 100%
+        padding: 0 12px
+        min-width: 351px
+
+.header
+    height: 80px
+    border-bottom: 1px solid $black0
+    +flex(space-between)
+    margin-bottom: 40px
+    .header-logo
+        +flex(flex-start)
+        +hideText
+        img
+            height: 40px
+            &:first-child
+                margin-right: 16px
+            +mobile
+                height: 24px
+    +mobile
+        position: fixed
+        top: 0
+        background-color: $black100
+        z-index: 2
+
+.header-nav
+    +flex(space-between)
+    a
+        color: $black0
+        padding: 16px 0
+        transition: 0.2s all
+        &:first-child
+            margin-right: 20px
+        &:hover
+            color: $black60
+    +mobile
+        display: none
+
+.burger-btn
+    margin-right: 11px
+    .active
+        display: block
+    +mobile
+        +flex
+
+.mobile-burger-nav
+    position: fixed
+    z-index: 2
+    width: 100%
+    height: calc( 100vh - 80px)
+    background-color: $black100
+    flex-direction: column
+    top: 80px
+    left: 0px
+    &.active
+        +flex(space-between)
+    .burger-link
+        flex-grow: 1
+        +flex
+        flex-direction: column
+        a
+            font-weight: 900
+            font-size: 80px
+            line-height: 1.2
+    .burger-footer
+        width: 100%
+        border-top: 1px solid $black0
+        padding: 32px 12px
+        span, a
+            font-weight: 700
+            margin-right: 20px
+        > span
+            margin-bottom: 24px
+
+
+
+.footer-nav
+    +flex(space-between, flex-start)
+    border-top: 1px solid $black0
+    padding: 80px 0px
+    +mobile
+        flex-direction: column-reverse
+    .footer-nav-link
+        +flex(flex-start, flex-start)
+        flex-direction: column
+        a
+            font-weight: 900
+            font-size: 80px
+            line-height: 1.2
+            color: $black0
+            transition: 0.3s all
+            &:first-child
+                margin-bottom: 8px
+            &:hover
+                color: $black60
+            +mobile
+                font-size: 48px
+.footer-nav-logo
+    +flex(flex-end)
+    +hideText
+    +mobile
+        margin-bottom: 40px
+    img
+        height: 40px
+        margin-right: 14px
+
+.footer-about
+    +flex(space-between)
+    border-top: 1px solid $black0
+    padding: 32px 0px
+    font-weight: 700
+    .footer-about-cc
+        margin-right: 100px
+        a
+            color: $black0
+            transition: 0.3s all
+            &:hover
+                color: $black60
+    .footer-about-sns
+        flex-grow: 2
+        a
+            padding: 10px
+    .footer-about-to-top
+        +flex(flex-end)
+        flex-grow: 1
+        span
+            margin-right: 12px
+    +mobile
+        flex-wrap: wrap
+        .footer-about-cc
+            order: 1
+            margin-bottom: 24px
+        .footer-about-sns
+            order: 3
+            a:first-child
+                padding-left: 0px
+        .footer-about-to-top
+            order: 2
+            flex-grow: unset
+            margin-bottom: 24px
+
+@keyframes FadeToTop 
+    0%
+        transform: translateY(100%)
+    25%
+        transform: translateY(0%)
+    75%
+        transform: translateY(0%)
+    100%
+        transform: translateY(-100%)

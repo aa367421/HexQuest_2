@@ -1,0 +1,193 @@
+.pricing-section
+    +mobile
+        margin-top: 120px // for header nav
+    .pricing-title
+        font-weight: 900
+        font-size: 120px
+        line-height: 1.2
+        margin-bottom: 80px
+    .pricing-quote
+        +flex(flex-end)
+        width: 100%
+        padding-left: 50%
+        font-weight: 900
+        font-size: 48px
+        line-height: 1.2
+        margin-bottom: 238px
+    .pricing-animation
+        +flex(flex-start)
+        margin-bottom: 160px
+        overflow: hidden
+        img
+            width: unset
+            animation: FadeToTop 5s ease-in-out infinite 
+            @for $i from 1 through 3
+                &.img#{$i}
+                    animation-delay: -$i * 1.5s
+    .pricing-price
+        .pricing-head
+            font-weight: 900
+            font-size: 32px
+            line-height: 1.2
+            margin-bottom: 80px
+        .pricing-price-cardlist
+            +flex(space-between)
+            flex-wrap: wrap
+            margin-bottom: 160px
+            > li
+                width: 49%
+                border: 1px solid $black80
+                border-radius: 16px
+                margin-bottom: 24px
+            > li:nth-child(n+3)
+                margin-bottom: 0
+    +mobile
+        .pricing-title
+            font-size: 48px
+        .pricing-quote
+            font-size: 28px
+            padding-left: 40%
+            margin-bottom: 260px
+        .pricing-animation
+            width: unset
+            margin-bottom: 120px
+            img
+                width: 33%
+        .pricing-price
+            .pricing-head
+                font-size: 20px
+                margin-bottom: 24px
+            .pricing-price-cardlist
+                display: block
+                margin-bottom: 120px
+                > li
+                    width: unset
+                    max-height: unset
+                    margin-bottom: 12px
+                > li:nth-child(n+3)
+                    margin-bottom: unset
+                > li:last-child
+                    margin-bottom: 0
+
+.price-card
+    +flex(space-between, strech)
+    flex-direction: column
+    padding-top: 20px
+    min-height: 318px
+    li
+        list-style: inside
+    .pricing-engineer-introduce
+        padding: 0px 32px
+        flex-grow: 1
+        span
+            font-weight: 900
+            font-size: 32px
+            line-height: 1.2
+            margin-bottom: 12px
+    .pricing-info
+        width: 100%
+        +flex(space-between)
+        padding: 20px 32px
+        border-top: 1px solid $black60
+        span
+            +flex(flex-start)
+            font-weight: 700
+        > span
+            font-weight: 900
+            font-size: 20px
+            line-height: 1.2
+            .tokens
+                font-weight: 400
+                color: $black60
+        a
+            +flex(flex-end)
+    +mobile
+        min-height: 240px
+        .pricing-engineer-introduce
+            padding: 0px 20px
+        .pricing-info
+            padding: 20px
+
+.pricing-rule
+    +flex(space-between, flex-start)
+    line-height: 1.2
+    margin-bottom: 160px
+    span
+        font-weight: 900
+    > span
+        font-size: 32px
+        flex: 30%
+    .rule-cardlist
+        flex: 70%
+        .rule-card
+            border-bottom: 1px solid $black80
+            padding-bottom: 40px
+            margin-bottom: 40px
+            span
+                font-size: 48px
+                margin-bottom: 24px
+            p
+                font-size: 32px
+    +mobile
+        display: block
+        margin-bottom: 120px
+        > span
+            font-size: 20px
+            margin-bottom: 48px
+        .rule-cardlist
+            .rule-card
+                margin-bottom: 24px
+                span
+                    font-size: 32px
+                p
+                    font-size: 16px
+
+.question-section
+    +flex(space-between, flex-start)
+    padding: 160px 0px
+    > span
+        font-weight: 900
+        font-size: 32px
+        line-height: 1.2
+        flex: 30%
+    .question-cardlist
+        flex: 70%
+    +mobile
+        display: block
+        padding: 120px 0px
+        > span 
+            font-size: 20px
+            margin-bottom: 24px
+
+.question-card
+    +flex(flex-start, flex-start)
+    padding: 20px 45px
+    border: 1px solid $black80
+    border-radius: 16px
+    margin-bottom: 16px
+    &:hover, &.active
+        border-color: $black0
+    &:last-child
+        margin-bottom: 0
+    .icon
+        margin-right: 25px        
+        span
+            cursor: pointer
+            display: none
+            &.active
+                display: block
+    .content
+        .question
+            font-weight: 900
+            font-size: 20px
+            line-height: 1.2
+    .answer
+        height: 0px
+        overflow: hidden
+        // transition: 1s all
+        &.active
+            padding-top: 16px 
+            height: unset
+
+    +mobile
+        padding: 20px
